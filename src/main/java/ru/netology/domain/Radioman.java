@@ -80,7 +80,7 @@ public class Radioman {
 
     public void decreaseVolume() {
 
-        if (currentVolume > minVolume) {
+        if (currentVolume >= minVolume) {
             currentVolume--;
         } else {
             currentVolume = minVolume;
@@ -89,7 +89,7 @@ public class Radioman {
 
     public void nextRadioStation() {
 
-        if (currentRadioStation < maxRadioStation) {
+        if (currentRadioStation <= maxRadioStation) {
             currentRadioStation++;
         } else {
             currentRadioStation = minRadioStation;
