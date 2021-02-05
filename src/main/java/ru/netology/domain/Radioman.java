@@ -74,7 +74,7 @@ public class Radioman {
         if (currentVolume < maxVolume) {
             currentVolume++;
         } else {
-            currentVolume = maxVolume;
+            currentVolume = minVolume;
         }
     }
 
@@ -83,7 +83,7 @@ public class Radioman {
         if (currentVolume > minVolume) {
             currentVolume--;
         } else {
-            currentVolume = minVolume;
+            currentVolume = maxVolume;
         }
     }
 
