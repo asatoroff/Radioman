@@ -70,21 +70,14 @@ public class Radioman {
         this.on = on;
     }
 
-    public void increaseVolume() {
-        if (currentVolume < maxVolume) {
-            currentVolume++;
-        } else {
-            currentVolume = minVolume;
+   public void setCurrentVolume(int currentVolume) {
+        if (currentVolume >= maxVolume) {
+            this.currentVolume = maxVolume;
+            return;
         }
-    }
-
-    public void decreaseVolume() {
-
-        if (currentVolume > minVolume) {
-            currentVolume--;
-        } else {
-            currentVolume = maxVolume;
-        }
+        if (currentVolume <= minVolume) {
+            this.currentVolume = minVolume;
+            return;
     }
 
     public void nextRadioStation() {
