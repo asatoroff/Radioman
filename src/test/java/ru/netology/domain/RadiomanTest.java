@@ -42,7 +42,7 @@ public class RadiomanTest {
         radioman.setMinVolume(0);
         radioman.setCurrentVolume(10);
         radioman.increaseVolume();
-        int expected = 0;
+        int expected = 10;
 
         assertEquals(expected, radioman.getCurrentVolume());
     }
@@ -55,7 +55,7 @@ public class RadiomanTest {
         radioman.setMinVolume(0);
         radioman.setCurrentVolume(0);
         radioman.decreaseVolume();
-        int expected = 10;
+        int expected = 0;
 
         assertEquals(expected, radioman.getCurrentVolume());
     }
