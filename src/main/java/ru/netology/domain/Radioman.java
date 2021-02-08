@@ -1,51 +1,22 @@
 package ru.netology.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+
 public class Radioman {
     private int minVolume = 0;
     private int maxVolume = 100;
-    private int currentVolume;
+    private int currentVolume = 50;
     private int minRadioStation = 0;
     private int maxRadioStation = 10;
-    private int currentRadioStation;
+    private int currentRadioStation = 5;
     private boolean on;
 
-    public Radioman(int minVolume, int maxVolume, int currentVolume) {
-        this.minVolume = minVolume;
-        this.maxVolume = maxVolume;
-        this.currentVolume = currentVolume;
-    }
-
-    public Radioman(int maxRadioStation, int currentRadioStation) {
-        this.maxRadioStation = maxRadioStation;
-        this.currentRadioStation = currentRadioStation;
-    }
-
-
-    public Radioman() {
-    }
-
-    public int getMinVolume() {
-
-        return minVolume;
-    }
-
-    /*public void setMinVolume(int minVolume) {
-        this.minVolume = minVolume;
-    }
-    */
-
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    /*public void setMaxVolume(int maxVolume) {
-        this.maxVolume = maxVolume;
-    }
-     */
-
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
 
     public void setCurrentVolume(int currentVolume) {
         if (currentVolume > maxVolume) {
@@ -59,45 +30,18 @@ public class Radioman {
         this.currentVolume = currentVolume;
     }
 
-
-    /*public int getMinRadioStation() {
-        return minRadioStation;
-    }
-    public void setMinRadioStation(int minRadioStation) {
-        this.minRadioStation = minRadioStation;
-    }
-    public int getMaxRadioStation() {
-        return maxRadioStation;
-    }
-    public void setMaxRadioStation(int maxRadioStation) {
-        this.maxRadioStation = maxRadioStation;
-    }
-     */
-
-    public int getCurrentRadioStation() {
-        return currentRadioStation;
-    }
-
-    /*public boolean isOn() {
-        return on;
-    }
-    public void setOn(boolean on) {
-        this.on = on;
-    }
-     */
-
     public void increaseVolume() {
         if (currentVolume >= maxVolume) {
             return;
         }
-        this.currentVolume++;
+        currentVolume++;
     }
 
     public void decreaseVolume() {
         if (currentVolume <= minVolume) {
             return;
         }
-        this.currentVolume--;
+        currentVolume--;
 
     }
 
